@@ -16,6 +16,7 @@
 		7CD6FF292259D478007C283F /* MorpheusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF282259D478007C283F /* MorpheusUITests.swift */; };
 		7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF392259D5DE007C283F /* MainView.swift */; };
 		7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */; };
+		7CD6FF412259DFFF007C283F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF402259DFFF007C283F /* Animation.swift */; };
 		D65E6522E0B883E02C952A75 /* Pods_MorpheusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */; };
 		E83C0C2030DCF8FC4FD291B9 /* Pods_MorpheusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1559115A5ED42C77C2362CB3 /* Pods_MorpheusTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		7CD6FF2A2259D478007C283F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD6FF392259D5DE007C283F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7CD6FF402259DFFF007C283F /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		92903CA15CB6D9A7B9982C4D /* Pods-Morpheus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morpheus.debug.xcconfig"; path = "Target Support Files/Pods-Morpheus/Pods-Morpheus.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2F2E317A83C46AD2AF6D90 /* Pods-MorpheusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusTests.release.xcconfig"; path = "Target Support Files/Pods-MorpheusTests/Pods-MorpheusTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorpheusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 		7CD6FF3B2259D935007C283F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7CD6FF3F2259DFDD007C283F /* Structs */,
 				7CD6FF3C2259D93C007C283F /* Extensions */,
 			);
 			path = Utilities;
@@ -183,6 +186,14 @@
 				7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7CD6FF3F2259DFDD007C283F /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF402259DFFF007C283F /* Animation.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 		840E6F676BD8B6B982B38615 /* Pods */ = {
@@ -436,6 +447,7 @@
 				7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */,
 				7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */,
 				7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */,
+				7CD6FF412259DFFF007C283F /* Animation.swift in Sources */,
 				7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

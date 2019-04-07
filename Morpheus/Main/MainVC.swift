@@ -27,11 +27,24 @@ public final class MainVC: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let lefViewTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(MainVC.morphLeftView)
+        )
+        
+        self.rootview.leftView.addGestureRecognizer(lefViewTapGesture)
     }
 }
 
 // MARK: - Views
 extension MainVC {
     public unowned var rootview: MainView { return self.view as! MainView }
+}
+
+extension MainVC {
+    
+    @objc func morphLeftView() {
+        self.rootview.morphLeftView()
+    }
 }
