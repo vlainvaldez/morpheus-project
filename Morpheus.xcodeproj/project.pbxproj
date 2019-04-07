@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593843771C3F52761790DDDD /* Pods_Morpheus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE014A815886237DD10B4BE /* Pods_Morpheus.framework */; };
 		7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF082259D475007C283F /* AppDelegate.swift */; };
 		7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF0A2259D475007C283F /* MainVC.swift */; };
 		7CD6FF102259D477007C283F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6FF0F2259D477007C283F /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 		7CD6FF1E2259D478007C283F /* MorpheusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF1D2259D478007C283F /* MorpheusTests.swift */; };
 		7CD6FF292259D478007C283F /* MorpheusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF282259D478007C283F /* MorpheusUITests.swift */; };
 		7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF392259D5DE007C283F /* MainView.swift */; };
+		7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */; };
+		D65E6522E0B883E02C952A75 /* Pods_MorpheusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */; };
+		E83C0C2030DCF8FC4FD291B9 /* Pods_MorpheusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1559115A5ED42C77C2362CB3 /* Pods_MorpheusTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1559115A5ED42C77C2362CB3 /* Pods_MorpheusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorpheusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		203553D3FE4A510EC9756DAF /* Pods-MorpheusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusUITests.debug.xcconfig"; path = "Target Support Files/Pods-MorpheusUITests/Pods-MorpheusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		49F227BE25AB6994814FEBDD /* Pods-MorpheusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusUITests.release.xcconfig"; path = "Target Support Files/Pods-MorpheusUITests/Pods-MorpheusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DBCE2E99A4E0D4BF926453F /* Pods-MorpheusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusTests.debug.xcconfig"; path = "Target Support Files/Pods-MorpheusTests/Pods-MorpheusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DE014A815886237DD10B4BE /* Pods_Morpheus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morpheus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C6D4FB04572A380D1CEDDFA /* Pods-Morpheus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morpheus.release.xcconfig"; path = "Target Support Files/Pods-Morpheus/Pods-Morpheus.release.xcconfig"; sourceTree = "<group>"; };
 		7CD6FF052259D475007C283F /* Morpheus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morpheus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD6FF082259D475007C283F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CD6FF0A2259D475007C283F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -47,6 +57,10 @@
 		7CD6FF282259D478007C283F /* MorpheusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorpheusUITests.swift; sourceTree = "<group>"; };
 		7CD6FF2A2259D478007C283F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD6FF392259D5DE007C283F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		92903CA15CB6D9A7B9982C4D /* Pods-Morpheus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morpheus.debug.xcconfig"; path = "Target Support Files/Pods-Morpheus/Pods-Morpheus.debug.xcconfig"; sourceTree = "<group>"; };
+		CD2F2E317A83C46AD2AF6D90 /* Pods-MorpheusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusTests.release.xcconfig"; path = "Target Support Files/Pods-MorpheusTests/Pods-MorpheusTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorpheusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593843771C3F52761790DDDD /* Pods_Morpheus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83C0C2030DCF8FC4FD291B9 /* Pods_MorpheusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65E6522E0B883E02C952A75 /* Pods_MorpheusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,8 @@
 				7CD6FF1C2259D478007C283F /* MorpheusTests */,
 				7CD6FF272259D478007C283F /* MorpheusUITests */,
 				7CD6FF062259D475007C283F /* Products */,
+				840E6F676BD8B6B982B38615 /* Pods */,
+				86332DB0F1D28C989668E780 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +116,7 @@
 		7CD6FF072259D475007C283F /* Morpheus */ = {
 			isa = PBXGroup;
 			children = (
+				7CD6FF3B2259D935007C283F /* Utilities */,
 				7CD6FF362259D504007C283F /* App */,
 				7CD6FF372259D510007C283F /* Supporting Files */,
 				7CD6FF382259D523007C283F /* Main */,
@@ -149,6 +169,45 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		7CD6FF3B2259D935007C283F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF3C2259D93C007C283F /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7CD6FF3C2259D93C007C283F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		840E6F676BD8B6B982B38615 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92903CA15CB6D9A7B9982C4D /* Pods-Morpheus.debug.xcconfig */,
+				7C6D4FB04572A380D1CEDDFA /* Pods-Morpheus.release.xcconfig */,
+				4DBCE2E99A4E0D4BF926453F /* Pods-MorpheusTests.debug.xcconfig */,
+				CD2F2E317A83C46AD2AF6D90 /* Pods-MorpheusTests.release.xcconfig */,
+				203553D3FE4A510EC9756DAF /* Pods-MorpheusUITests.debug.xcconfig */,
+				49F227BE25AB6994814FEBDD /* Pods-MorpheusUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		86332DB0F1D28C989668E780 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DE014A815886237DD10B4BE /* Pods_Morpheus.framework */,
+				1559115A5ED42C77C2362CB3 /* Pods_MorpheusTests.framework */,
+				FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CD6FF2D2259D478007C283F /* Build configuration list for PBXNativeTarget "Morpheus" */;
 			buildPhases = (
+				51005AA3168B9EAA5E856247 /* [CP] Check Pods Manifest.lock */,
 				7CD6FF012259D475007C283F /* Sources */,
 				7CD6FF022259D475007C283F /* Frameworks */,
 				7CD6FF032259D475007C283F /* Resources */,
+				256D8FB24E1CE53093F46F5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CD6FF302259D478007C283F /* Build configuration list for PBXNativeTarget "MorpheusTests" */;
 			buildPhases = (
+				1077DE3902021F6DBD9787DB /* [CP] Check Pods Manifest.lock */,
 				7CD6FF152259D478007C283F /* Sources */,
 				7CD6FF162259D478007C283F /* Frameworks */,
 				7CD6FF172259D478007C283F /* Resources */,
@@ -191,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CD6FF332259D478007C283F /* Build configuration list for PBXNativeTarget "MorpheusUITests" */;
 			buildPhases = (
+				F194A5611D667086259886DC /* [CP] Check Pods Manifest.lock */,
 				7CD6FF202259D478007C283F /* Sources */,
 				7CD6FF212259D478007C283F /* Frameworks */,
 				7CD6FF222259D478007C283F /* Resources */,
@@ -274,6 +337,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1077DE3902021F6DBD9787DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MorpheusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		256D8FB24E1CE53093F46F5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Morpheus/Pods-Morpheus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Morpheus/Pods-Morpheus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51005AA3168B9EAA5E856247 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Morpheus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F194A5611D667086259886DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MorpheusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CD6FF012259D475007C283F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -281,6 +435,7 @@
 			files = (
 				7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */,
 				7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */,
+				7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */,
 				7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +601,7 @@
 		};
 		7CD6FF2E2259D478007C283F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92903CA15CB6D9A7B9982C4D /* Pods-Morpheus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +620,7 @@
 		};
 		7CD6FF2F2259D478007C283F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6D4FB04572A380D1CEDDFA /* Pods-Morpheus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +639,7 @@
 		};
 		7CD6FF312259D478007C283F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DBCE2E99A4E0D4BF926453F /* Pods-MorpheusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +661,7 @@
 		};
 		7CD6FF322259D478007C283F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD2F2E317A83C46AD2AF6D90 /* Pods-MorpheusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +683,7 @@
 		};
 		7CD6FF342259D478007C283F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 203553D3FE4A510EC9756DAF /* Pods-MorpheusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +704,7 @@
 		};
 		7CD6FF352259D478007C283F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F227BE25AB6994814FEBDD /* Pods-MorpheusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
