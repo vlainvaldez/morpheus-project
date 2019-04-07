@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF082259D475007C283F /* AppDelegate.swift */; };
+		7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF0A2259D475007C283F /* MainVC.swift */; };
+		7CD6FF102259D477007C283F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6FF0F2259D477007C283F /* Assets.xcassets */; };
+		7CD6FF132259D477007C283F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6FF112259D477007C283F /* LaunchScreen.storyboard */; };
+		7CD6FF1E2259D478007C283F /* MorpheusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF1D2259D478007C283F /* MorpheusTests.swift */; };
+		7CD6FF292259D478007C283F /* MorpheusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF282259D478007C283F /* MorpheusUITests.swift */; };
+		7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF392259D5DE007C283F /* MainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CD6FF1A2259D478007C283F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CD6FEFD2259D475007C283F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CD6FF042259D475007C283F;
+			remoteInfo = Morpheus;
+		};
+		7CD6FF252259D478007C283F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CD6FEFD2259D475007C283F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CD6FF042259D475007C283F;
+			remoteInfo = Morpheus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7CD6FF052259D475007C283F /* Morpheus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morpheus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD6FF082259D475007C283F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7CD6FF0A2259D475007C283F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		7CD6FF0F2259D477007C283F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CD6FF122259D477007C283F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7CD6FF142259D477007C283F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD6FF192259D478007C283F /* MorpheusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorpheusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD6FF1D2259D478007C283F /* MorpheusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorpheusTests.swift; sourceTree = "<group>"; };
+		7CD6FF1F2259D478007C283F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD6FF242259D478007C283F /* MorpheusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorpheusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD6FF282259D478007C283F /* MorpheusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorpheusUITests.swift; sourceTree = "<group>"; };
+		7CD6FF2A2259D478007C283F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD6FF392259D5DE007C283F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CD6FF022259D475007C283F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CD6FF162259D478007C283F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CD6FF212259D478007C283F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CD6FEFC2259D475007C283F = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF072259D475007C283F /* Morpheus */,
+				7CD6FF1C2259D478007C283F /* MorpheusTests */,
+				7CD6FF272259D478007C283F /* MorpheusUITests */,
+				7CD6FF062259D475007C283F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CD6FF062259D475007C283F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF052259D475007C283F /* Morpheus.app */,
+				7CD6FF192259D478007C283F /* MorpheusTests.xctest */,
+				7CD6FF242259D478007C283F /* MorpheusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CD6FF072259D475007C283F /* Morpheus */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF362259D504007C283F /* App */,
+				7CD6FF372259D510007C283F /* Supporting Files */,
+				7CD6FF382259D523007C283F /* Main */,
+				7CD6FF142259D477007C283F /* Info.plist */,
+			);
+			path = Morpheus;
+			sourceTree = "<group>";
+		};
+		7CD6FF1C2259D478007C283F /* MorpheusTests */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF1D2259D478007C283F /* MorpheusTests.swift */,
+				7CD6FF1F2259D478007C283F /* Info.plist */,
+			);
+			path = MorpheusTests;
+			sourceTree = "<group>";
+		};
+		7CD6FF272259D478007C283F /* MorpheusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF282259D478007C283F /* MorpheusUITests.swift */,
+				7CD6FF2A2259D478007C283F /* Info.plist */,
+			);
+			path = MorpheusUITests;
+			sourceTree = "<group>";
+		};
+		7CD6FF362259D504007C283F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF082259D475007C283F /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7CD6FF372259D510007C283F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF0F2259D477007C283F /* Assets.xcassets */,
+				7CD6FF112259D477007C283F /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CD6FF382259D523007C283F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7CD6FF0A2259D475007C283F /* MainVC.swift */,
+				7CD6FF392259D5DE007C283F /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CD6FF042259D475007C283F /* Morpheus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CD6FF2D2259D478007C283F /* Build configuration list for PBXNativeTarget "Morpheus" */;
+			buildPhases = (
+				7CD6FF012259D475007C283F /* Sources */,
+				7CD6FF022259D475007C283F /* Frameworks */,
+				7CD6FF032259D475007C283F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Morpheus;
+			productName = Morpheus;
+			productReference = 7CD6FF052259D475007C283F /* Morpheus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7CD6FF182259D478007C283F /* MorpheusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CD6FF302259D478007C283F /* Build configuration list for PBXNativeTarget "MorpheusTests" */;
+			buildPhases = (
+				7CD6FF152259D478007C283F /* Sources */,
+				7CD6FF162259D478007C283F /* Frameworks */,
+				7CD6FF172259D478007C283F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CD6FF1B2259D478007C283F /* PBXTargetDependency */,
+			);
+			name = MorpheusTests;
+			productName = MorpheusTests;
+			productReference = 7CD6FF192259D478007C283F /* MorpheusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7CD6FF232259D478007C283F /* MorpheusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CD6FF332259D478007C283F /* Build configuration list for PBXNativeTarget "MorpheusUITests" */;
+			buildPhases = (
+				7CD6FF202259D478007C283F /* Sources */,
+				7CD6FF212259D478007C283F /* Frameworks */,
+				7CD6FF222259D478007C283F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CD6FF262259D478007C283F /* PBXTargetDependency */,
+			);
+			name = MorpheusUITests;
+			productName = MorpheusUITests;
+			productReference = 7CD6FF242259D478007C283F /* MorpheusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CD6FEFD2259D475007C283F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "alvin joseph valdez";
+				TargetAttributes = {
+					7CD6FF042259D475007C283F = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					7CD6FF182259D478007C283F = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 7CD6FF042259D475007C283F;
+					};
+					7CD6FF232259D478007C283F = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 7CD6FF042259D475007C283F;
+					};
+				};
+			};
+			buildConfigurationList = 7CD6FF002259D475007C283F /* Build configuration list for PBXProject "Morpheus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CD6FEFC2259D475007C283F;
+			productRefGroup = 7CD6FF062259D475007C283F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CD6FF042259D475007C283F /* Morpheus */,
+				7CD6FF182259D478007C283F /* MorpheusTests */,
+				7CD6FF232259D478007C283F /* MorpheusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CD6FF032259D475007C283F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD6FF132259D477007C283F /* LaunchScreen.storyboard in Resources */,
+				7CD6FF102259D477007C283F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CD6FF172259D478007C283F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CD6FF222259D478007C283F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CD6FF012259D475007C283F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */,
+				7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */,
+				7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CD6FF152259D478007C283F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD6FF1E2259D478007C283F /* MorpheusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CD6FF202259D478007C283F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CD6FF292259D478007C283F /* MorpheusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CD6FF1B2259D478007C283F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CD6FF042259D475007C283F /* Morpheus */;
+			targetProxy = 7CD6FF1A2259D478007C283F /* PBXContainerItemProxy */;
+		};
+		7CD6FF262259D478007C283F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CD6FF042259D475007C283F /* Morpheus */;
+			targetProxy = 7CD6FF252259D478007C283F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7CD6FF112259D477007C283F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CD6FF122259D477007C283F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CD6FF2B2259D478007C283F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CD6FF2C2259D478007C283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CD6FF2E2259D478007C283F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = Morpheus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.Morpheus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CD6FF2F2259D478007C283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = Morpheus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.Morpheus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7CD6FF312259D478007C283F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = MorpheusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.MorpheusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Morpheus.app/Morpheus";
+			};
+			name = Debug;
+		};
+		7CD6FF322259D478007C283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = MorpheusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.MorpheusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Morpheus.app/Morpheus";
+			};
+			name = Release;
+		};
+		7CD6FF342259D478007C283F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = MorpheusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.MorpheusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Morpheus;
+			};
+			name = Debug;
+		};
+		7CD6FF352259D478007C283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
+				INFOPLIST_FILE = MorpheusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.MorpheusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Morpheus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CD6FF002259D475007C283F /* Build configuration list for PBXProject "Morpheus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD6FF2B2259D478007C283F /* Debug */,
+				7CD6FF2C2259D478007C283F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CD6FF2D2259D478007C283F /* Build configuration list for PBXNativeTarget "Morpheus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD6FF2E2259D478007C283F /* Debug */,
+				7CD6FF2F2259D478007C283F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CD6FF302259D478007C283F /* Build configuration list for PBXNativeTarget "MorpheusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD6FF312259D478007C283F /* Debug */,
+				7CD6FF322259D478007C283F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CD6FF332259D478007C283F /* Build configuration list for PBXNativeTarget "MorpheusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CD6FF342259D478007C283F /* Debug */,
+				7CD6FF352259D478007C283F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CD6FEFD2259D475007C283F /* Project object */;
+}
