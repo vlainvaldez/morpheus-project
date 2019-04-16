@@ -12,8 +12,8 @@ import SnapKit
 public final class MainView: UIView {
     
     // MARK: Subviews
-    public let leftView: UIView = {
-        let view: UIView = UIView()
+    public let leftView: MorpheusView = {
+        let view: MorpheusView = MorpheusView()
         view.backgroundColor = UIColor.red
         return view
     }()
@@ -59,28 +59,75 @@ public final class MainView: UIView {
 extension MainView {
     
     public func morphLeftView() {
-        UIView.animate(withDuration: 3.0) {
-            self.leftView.snp.removeConstraints()
-            
-            self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-                make.height.equalTo(500.0)
-                make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
-                make.leading.equalToSuperview().offset(20.0)
-                make.trailing.equalToSuperview().inset(20.0)
-            }
-            
-            self.rightView.snp.removeConstraints()
-            
-            self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-                make.height.equalTo(300.0)
-                make.top.equalTo(self.leftView.snp.bottom).offset(20.0)
-                make.trailing.equalToSuperview().inset(20.0)
-                make.leading.equalToSuperview().offset(20.0)
-            }
+        
+        switch self.leftView.isExpanded {
+        case true:
+            UIView.animate(withDuration: 1.0, animations: { [unowned self] in
 
-            self.layoutIfNeeded()
+                self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+                    self.leftViewWidth = make.width.equalTo(150.0).constraint
+                    self.leftViewHeight = make.height.equalTo(300.0).constraint
+                    make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+                    make.leading.equalToSuperview().offset(20.0)
+                }
+
+                self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+                    make.width.equalTo(150.0)
+                    make.height.equalTo(300.0)
+                    make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+                    make.trailing.equalToSuperview().inset(20.0)
+                }
+                
+                self.rightView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+
+                self.layoutIfNeeded()
+            }) { [unowned self] (completed: Bool) -> Void in
+                self.leftView.isExpanded = false
+                self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
+            }
+            
+        case false:
+            UIView.animate(withDuration: 1.0, animations: { [unowned self] in
+                self.leftView.snp.removeConstraints()
+                
+                self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+                    make.height.equalTo(500.0)
+                    make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+                    make.leading.equalToSuperview().offset(20.0)
+                    make.trailing.equalToSuperview().inset(20.0)
+                }
+                
+                self.rightView.snp.removeConstraints()
+                
+                self.rightView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+                
+                self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+                    make.top.equalTo(self.leftView.snp.bottom).offset(20.0)
+                    make.trailing.equalToSuperview().inset(20.0)
+                    make.leading.equalToSuperview().offset(20.0)
+                    make.bottom.equalToSuperview().inset(20.0)
+                }
+                
+                self.layoutIfNeeded()
+                
+            }) { [unowned self] (completed: Bool) -> Void in
+                self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
+                self.leftView.isExpanded = true
+            }
         }
-        
-        
     }
+}
+
+public class MorpheusView: UIView {
+    
+    public var isExpanded: Bool = false
+    
+    public init() {
+        super.init(frame: CGRect.zero)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

@@ -33,6 +33,8 @@ public final class MainVC: UIViewController {
             action: #selector(MainVC.morphLeftView)
         )
         
+        self.title = "Project Morpheus"
+        
         self.rootview.leftView.addGestureRecognizer(lefViewTapGesture)
     }
 }
