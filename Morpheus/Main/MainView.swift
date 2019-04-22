@@ -27,6 +27,12 @@ public final class MainView: UIView {
     private var leftViewWidth: Constraint!
     private var leftViewHeight: Constraint!
     
+    private var rightViewWidth: Constraint!
+    private var rightViewHeight: Constraint!
+    
+    private var morpheusViewWidth: CGFloat!
+    private var expandedMorpheusHeight: CGFloat!
+    
     // MARK: Initializer
     public override init(frame: CGRect) {
         super.init(frame: frame)        
@@ -44,11 +50,22 @@ public final class MainView: UIView {
         }
         
         self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-            make.width.equalTo(150.0)
-            make.height.equalTo(300.0)
+            self.rightViewWidth = make.width.equalTo(150.0).constraint
+            self.rightViewHeight =  make.height.equalTo(300.0).constraint
             make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
             make.trailing.equalToSuperview().inset(20.0)
         }
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.morpheusViewWidth = self.frame.width / 3
+        
+        self.expandedMorpheusHeight = self.frame.height / 2 - 50
+        
+        self.leftViewWidth.update(offset: self.morpheusViewWidth)
+        self.rightViewWidth.update(offset: self.morpheusViewWidth)
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -65,14 +82,14 @@ extension MainView {
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
 
                 self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-                    self.leftViewWidth = make.width.equalTo(150.0).constraint
+                    self.leftViewWidth = make.width.equalTo(self.morpheusViewWidth).constraint
                     self.leftViewHeight = make.height.equalTo(300.0).constraint
                     make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
                     make.leading.equalToSuperview().offset(20.0)
                 }
 
                 self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-                    make.width.equalTo(150.0)
+                    make.width.equalTo(self.morpheusViewWidth)
                     make.height.equalTo(300.0)
                     make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
                     make.trailing.equalToSuperview().inset(20.0)
@@ -91,7 +108,7 @@ extension MainView {
                 self.leftView.snp.removeConstraints()
                 
                 self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-                    make.height.equalTo(500.0)
+                    make.height.equalTo(self.expandedMorpheusHeight)
                     make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
                     make.leading.equalToSuperview().offset(20.0)
                     make.trailing.equalToSuperview().inset(20.0)
