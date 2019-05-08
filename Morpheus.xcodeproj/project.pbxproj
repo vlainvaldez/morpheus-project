@@ -17,6 +17,9 @@
 		7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF392259D5DE007C283F /* MainView.swift */; };
 		7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */; };
 		7CD6FF412259DFFF007C283F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF402259DFFF007C283F /* Animation.swift */; };
+		81809C0A2282D0DB00416C09 /* CollectionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81809C092282D0DB00416C09 /* CollectionMainView.swift */; };
+		81809C0C2282D32200416C09 /* SampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81809C0B2282D32200416C09 /* SampleCell.swift */; };
+		81809C0E2282D68B00416C09 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81809C0D2282D68B00416C09 /* CellViewModel.swift */; };
 		D65E6522E0B883E02C952A75 /* Pods_MorpheusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */; };
 		E83C0C2030DCF8FC4FD291B9 /* Pods_MorpheusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1559115A5ED42C77C2362CB3 /* Pods_MorpheusTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +63,9 @@
 		7CD6FF392259D5DE007C283F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7CD6FF3D2259D96B007C283F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		7CD6FF402259DFFF007C283F /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		81809C092282D0DB00416C09 /* CollectionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionMainView.swift; sourceTree = "<group>"; };
+		81809C0B2282D32200416C09 /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
+		81809C0D2282D68B00416C09 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		92903CA15CB6D9A7B9982C4D /* Pods-Morpheus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morpheus.debug.xcconfig"; path = "Target Support Files/Pods-Morpheus/Pods-Morpheus.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2F2E317A83C46AD2AF6D90 /* Pods-MorpheusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusTests.release.xcconfig"; path = "Target Support Files/Pods-MorpheusTests/Pods-MorpheusTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB0A87554EB62E94D595C2B0 /* Pods_MorpheusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorpheusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +173,9 @@
 			children = (
 				7CD6FF0A2259D475007C283F /* MainVC.swift */,
 				7CD6FF392259D5DE007C283F /* MainView.swift */,
+				81809C092282D0DB00416C09 /* CollectionMainView.swift */,
+				81809C0B2282D32200416C09 /* SampleCell.swift */,
+				81809C0D2282D68B00416C09 /* CellViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -445,8 +454,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */,
+				81809C0A2282D0DB00416C09 /* CollectionMainView.swift in Sources */,
+				81809C0E2282D68B00416C09 /* CellViewModel.swift in Sources */,
 				7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */,
 				7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */,
+				81809C0C2282D32200416C09 /* SampleCell.swift in Sources */,
 				7CD6FF412259DFFF007C283F /* Animation.swift in Sources */,
 				7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */,
 			);

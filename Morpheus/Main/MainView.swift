@@ -24,6 +24,17 @@ public final class MainView: UIView {
         return view
     }()
     
+    public let button: NavigationButton = {
+        let view: NavigationButton = NavigationButton()
+        view.setTitle("Back", for: UIControl.State.normal)
+        view.setTitleColor(UIColor.blue, for: UIControl.State.normal)
+        view.withAccesory(
+            direction: NavigationButton.AccesoryDirection.left,
+            image: #imageLiteral(resourceName: "left-arrow").withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        )
+        return view
+    }()
+    
     private var leftViewWidth: Constraint!
     private var leftViewHeight: Constraint!
     
@@ -39,7 +50,7 @@ public final class MainView: UIView {
         self.backgroundColor = UIColor.white
         
         self.subviews(forAutoLayout: [
-            self.leftView, self.rightView
+            self.leftView, self.rightView, self.button
         ])
         
         self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
@@ -55,6 +66,13 @@ public final class MainView: UIView {
             make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
             make.trailing.equalToSuperview().inset(20.0)
         }
+        
+        self.button.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.bottom.equalToSuperview()
+            make.width.equalTo(150.0)
+            make.height.equalTo(60.0)
+            make.centerX.equalToSuperview()
+        }
     }
     
     public override func layoutSubviews() {
@@ -66,6 +84,9 @@ public final class MainView: UIView {
         
         self.leftViewWidth.update(offset: self.morpheusViewWidth)
         self.rightViewWidth.update(offset: self.morpheusViewWidth)
+        
+//        self.button.imageEdgeInsets = UIEdgeInsets(top: 5, left: (self.button.bounds.width - 35), bottom: 5, right: 5)
+//        self.button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: (self.button.imageView?.frame.width)!)
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -147,4 +168,44 @@ public class MorpheusView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+public class NavigationButton: UIButton {
+    
+    // MARK: - Enum Declaration
+    public enum AccesoryDirection {
+        case right
+        case left
+    }
+    
+    private var accesoryDirection: AccesoryDirection?
+    
+    // MARK: - Initializers
+    public init() {
+        super.init(frame: CGRect.zero)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - LifeCycle Methods
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let direction = self.accesoryDirection {
+            switch direction {
+            case .left:
+                break
+            case .right:
+                self.imageEdgeInsets = UIEdgeInsets(top: 5, left: (self.bounds.width - 35), bottom: 5, right: 5)
+                self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: (self.imageView?.frame.width)!)
+            }
+        }
+    }
+
+    // MARK: - Public API's
+    public func withAccesory(direction: AccesoryDirection, image: UIImage) {
+        self.setImage(image, for: UIControl.State.normal)
+    }
 }
