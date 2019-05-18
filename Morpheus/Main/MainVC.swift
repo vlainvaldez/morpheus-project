@@ -22,7 +22,7 @@ public final class MainVC: UIViewController {
     // MARK: LifeCycle Methods
     public override func loadView() {
         super.loadView()
-        self.view = MainView()
+        self.view = MainView(productView: self.productVC.rootView)
     }
     
     public override func viewDidLoad() {
@@ -37,6 +37,8 @@ public final class MainVC: UIViewController {
         
         self.rootview.leftView.addGestureRecognizer(lefViewTapGesture)
     }
+    
+    public var productVC: ProductVC = ProductVC(state: ProductVC.State.normal)
 }
 
 // MARK: - Views

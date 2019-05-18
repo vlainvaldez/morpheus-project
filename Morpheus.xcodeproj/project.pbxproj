@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		593843771C3F52761790DDDD /* Pods_Morpheus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE014A815886237DD10B4BE /* Pods_Morpheus.framework */; };
+		7C197597228FECCE000C1213 /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C197596228FECCE000C1213 /* ProductVC.swift */; };
+		7C197599228FECE4000C1213 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C197598228FECE4000C1213 /* ProductView.swift */; };
 		7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF082259D475007C283F /* AppDelegate.swift */; };
 		7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6FF0A2259D475007C283F /* MainVC.swift */; };
 		7CD6FF102259D477007C283F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6FF0F2259D477007C283F /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		49F227BE25AB6994814FEBDD /* Pods-MorpheusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusUITests.release.xcconfig"; path = "Target Support Files/Pods-MorpheusUITests/Pods-MorpheusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DBCE2E99A4E0D4BF926453F /* Pods-MorpheusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorpheusTests.debug.xcconfig"; path = "Target Support Files/Pods-MorpheusTests/Pods-MorpheusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE014A815886237DD10B4BE /* Pods_Morpheus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morpheus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C197596228FECCE000C1213 /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
+		7C197598228FECE4000C1213 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		7C6D4FB04572A380D1CEDDFA /* Pods-Morpheus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morpheus.release.xcconfig"; path = "Target Support Files/Pods-Morpheus/Pods-Morpheus.release.xcconfig"; sourceTree = "<group>"; };
 		7CD6FF052259D475007C283F /* Morpheus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morpheus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD6FF082259D475007C283F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C197595228FEC9A000C1213 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				7C197596228FECCE000C1213 /* ProductVC.swift */,
+				7C197598228FECE4000C1213 /* ProductView.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		7CD6FEFC2259D475007C283F = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 				7CD6FF362259D504007C283F /* App */,
 				7CD6FF372259D510007C283F /* Supporting Files */,
 				7CD6FF382259D523007C283F /* Main */,
+				7C197595228FEC9A000C1213 /* Product */,
 				7CD6FF142259D477007C283F /* Info.plist */,
 			);
 			path = Morpheus;
@@ -444,9 +458,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C197597228FECCE000C1213 /* ProductVC.swift in Sources */,
 				7CD6FF0B2259D475007C283F /* MainVC.swift in Sources */,
 				7CD6FF3A2259D5DE007C283F /* MainView.swift in Sources */,
 				7CD6FF3E2259D96B007C283F /* UIViewExtension.swift in Sources */,
+				7C197599228FECE4000C1213 /* ProductView.swift in Sources */,
 				7CD6FF412259DFFF007C283F /* Animation.swift in Sources */,
 				7CD6FF092259D475007C283F /* AppDelegate.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ public final class MainView: UIView {
     // MARK: Subviews
     public let leftView: MorpheusView = {
         let view: MorpheusView = MorpheusView()
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.white
         return view
     }()
     
@@ -33,9 +33,12 @@ public final class MainView: UIView {
     private var morpheusViewWidth: CGFloat!
     private var expandedMorpheusHeight: CGFloat!
     
+    private var productView: ProductView
+    
     // MARK: Initializer
-    public override init(frame: CGRect) {
-        super.init(frame: frame)        
+    public init(productView: ProductView) {
+        self.productView = productView
+        super.init(frame: CGRect.zero)
         self.backgroundColor = UIColor.white
         
         self.subviews(forAutoLayout: [
@@ -54,6 +57,12 @@ public final class MainView: UIView {
             self.rightViewHeight =  make.height.equalTo(300.0).constraint
             make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
             make.trailing.equalToSuperview().inset(20.0)
+        }
+        
+        self.leftView.subviews(forAutoLayout: [self.productView])
+        
+        self.productView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.edges.equalToSuperview()
         }
     }
     
@@ -101,7 +110,10 @@ extension MainView {
             }) { [unowned self] (completed: Bool) -> Void in
                 self.leftView.isExpanded = false
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
+                self.productView.state = ProductVC.State.normal
             }
+            
+            
             
         case false:
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
@@ -130,6 +142,7 @@ extension MainView {
             }) { [unowned self] (completed: Bool) -> Void in
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
                 self.leftView.isExpanded = true
+                self.productView.state = ProductVC.State.expanded
             }
         }
     }
