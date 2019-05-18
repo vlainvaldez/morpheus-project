@@ -89,7 +89,7 @@ extension MainView {
         switch self.leftView.isExpanded {
         case true:
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
-
+                self.leftView.snp.removeConstraints()
                 self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
                     self.leftViewWidth = make.width.equalTo(self.morpheusViewWidth).constraint
                     self.leftViewHeight = make.height.equalTo(300.0).constraint
@@ -112,9 +112,7 @@ extension MainView {
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
                 self.productView.state = ProductVC.State.normal
             }
-            
-            
-            
+
         case false:
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
                 self.leftView.snp.removeConstraints()

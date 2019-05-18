@@ -7,8 +7,21 @@
 //
 
 import UIKit
+import SnapKit
 
 public final class ProductView: UIView {
+    
+    private let headerLabel: UILabel = {
+        let view: UILabel = UILabel()
+        view.text = "Just a header Label"
+        return view
+    }()
+    
+    private let descriptionLabel: UILabel = {
+        let view: UILabel = UILabel()
+        view.text = "Just a description Label"
+        return view
+    }()
     
     // MARK: Initializer
     public init(state: ProductVC.State) {
@@ -16,6 +29,19 @@ public final class ProductView: UIView {
         
         super.init(frame: CGRect.zero)
         self.backgroundColor = UIColor.blue.withAlphaComponent(0.7)
+        
+        self.subviews(forAutoLayout: [
+            self.headerLabel, self.descriptionLabel
+        ])
+        
+        switch self.state {
+        case .normal:
+            self.normalStateLayout()
+        case .expanded:
+            self.expandedStateLayout()
+        case .beneath:
+            break
+        }
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -33,13 +59,42 @@ public final class ProductView: UIView {
             case .expanded:
                 UIView.animate(withDuration: 0.3) {
                     self.backgroundColor = UIColor.red.withAlphaComponent(0.7)
+                    self.expandedStateLayout()
                 }
             case .normal:
                 UIView.animate(withDuration: 0.3) {
                     self.backgroundColor = UIColor.blue.withAlphaComponent(0.7)
+                    self.normalStateLayout()
                 }
             }
         }
+    }
+}
+
+extension ProductView {
+    
+    private func normalStateLayout() {
+        self.headerLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalToSuperview().offset(5.0)
+        }
+        self.descriptionLabel.snp.removeConstraints()
+        self.descriptionLabel.isHidden = true
+        
+        self.layoutIfNeeded()
+    }
+    
+    private func expandedStateLayout() {
+        self.descriptionLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalTo(self.headerLabel.snp.bottom).offset(5.0)
+        }
+        
+        self.descriptionLabel.isHidden = false
+        
+        self.layoutIfNeeded()
     }
     
 }
