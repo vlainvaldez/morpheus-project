@@ -12,6 +12,18 @@ import SnapKit
 public final class MainView: UIView {
     
     // MARK: Subviews
+    private let scrollView: UIScrollView = {
+        let view: UIScrollView = UIScrollView()
+        view.backgroundColor = UIColor.clear
+        return view
+    }()
+    
+    private let viewContainer: UIView = {
+        let view: UIView = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
+    }()
+    
     public let leftView: MorpheusView = {
         let view: MorpheusView = MorpheusView()
         view.backgroundColor = UIColor.white
@@ -21,6 +33,12 @@ public final class MainView: UIView {
     public let rightView: UIView = {
         let view: UIView = UIView()
         view.backgroundColor = UIColor.red
+        return view
+    }()
+    
+    private let descriptionLabel: UILabel = {
+        let view: UILabel = UILabel()
+        view.text = "Just a description Label"
         return view
     }()
     
@@ -35,6 +53,9 @@ public final class MainView: UIView {
     
     private var productView: ProductView
     
+    private var leftViewBottomConstraint: Constraint!
+    private var rightViewBottomConstraint: Constraint!
+    
     // MARK: Initializer
     public init(productView: ProductView) {
         self.productView = productView
@@ -42,34 +63,59 @@ public final class MainView: UIView {
         self.backgroundColor = UIColor.white
         
         self.subviews(forAutoLayout: [
-            self.leftView, self.rightView
+            self.scrollView
+        ])
+        
+        self.scrollView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(70.0)
+        }
+        
+        self.scrollView.subviews(forAutoLayout: [
+            self.viewContainer
+        ])
+        
+        self.viewContainer.backgroundColor = UIColor.lightGray
+        
+        self.viewContainer.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.edges.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+        
+        self.viewContainer.subviews(forAutoLayout: [
+            self.leftView,
+            self.rightView
         ])
         
         self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             self.leftViewWidth = make.width.equalTo(150.0).constraint
-            self.leftViewHeight = make.height.equalTo(300.0).constraint
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+            self.leftViewHeight = make.height.equalTo(400.0).constraint
+            make.top.equalToSuperview().offset(20.0)
             make.leading.equalToSuperview().offset(20.0)
+            self.leftViewBottomConstraint = make.bottom.equalToSuperview().inset(20.0).constraint
         }
         
         self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             self.rightViewWidth = make.width.equalTo(150.0).constraint
-            self.rightViewHeight =  make.height.equalTo(300.0).constraint
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+            self.rightViewHeight =  make.height.equalTo(400.0).constraint
+            make.top.equalToSuperview().offset(20.0)
             make.trailing.equalToSuperview().inset(20.0)
+            self.rightViewBottomConstraint =  make.bottom.equalToSuperview().inset(20.0).constraint
         }
         
         self.leftView.subviews(forAutoLayout: [self.productView])
-        
+
         self.productView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()
         }
+        
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.morpheusViewWidth = self.frame.width / 3
+        self.morpheusViewWidth = self.bounds.width / 2 - 30
         
         self.expandedMorpheusHeight = self.frame.height / 2 - 50
         
@@ -85,23 +131,26 @@ public final class MainView: UIView {
 extension MainView {
     
     public func morphLeftView() {
-        
+        self.productView.state = ProductVC.State.normal
         switch self.leftView.isExpanded {
         case true:
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
                 self.leftView.snp.removeConstraints()
                 self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
                     self.leftViewWidth = make.width.equalTo(self.morpheusViewWidth).constraint
-                    self.leftViewHeight = make.height.equalTo(300.0).constraint
-                    make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+                    self.leftViewHeight = make.height.equalTo(400.0).constraint
+                    make.top.equalToSuperview().offset(20.0)
                     make.leading.equalToSuperview().offset(20.0)
                 }
-
+                
+                self.rightView.snp.removeConstraints()
+                
                 self.rightView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
                     make.width.equalTo(self.morpheusViewWidth)
-                    make.height.equalTo(300.0)
-                    make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+                    make.height.equalTo(400.0)
+                    make.top.equalToSuperview().offset(20.0)
                     make.trailing.equalToSuperview().inset(20.0)
+                    make.bottom.equalToSuperview()
                 }
                 
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
@@ -110,16 +159,16 @@ extension MainView {
             }) { [unowned self] (completed: Bool) -> Void in
                 self.leftView.isExpanded = false
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
-                self.productView.state = ProductVC.State.normal
             }
 
         case false:
+            self.productView.state = ProductVC.State.expanded
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
                 self.leftView.snp.removeConstraints()
                 
                 self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
                     make.height.equalTo(self.expandedMorpheusHeight)
-                    make.top.equalTo(self.safeAreaLayoutGuide).offset(20.0)
+                    make.top.equalToSuperview().offset(20.0)
                     make.leading.equalToSuperview().offset(20.0)
                     make.trailing.equalToSuperview().inset(20.0)
                 }
@@ -132,6 +181,7 @@ extension MainView {
                     make.top.equalTo(self.leftView.snp.bottom).offset(20.0)
                     make.trailing.equalToSuperview().inset(20.0)
                     make.leading.equalToSuperview().offset(20.0)
+                    make.height.equalTo(600.0)
                     make.bottom.equalToSuperview().inset(20.0)
                 }
                 
@@ -140,7 +190,6 @@ extension MainView {
             }) { [unowned self] (completed: Bool) -> Void in
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
                 self.leftView.isExpanded = true
-                self.productView.state = ProductVC.State.expanded
             }
         }
     }
