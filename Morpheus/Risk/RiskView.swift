@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-public final class ProductView: UIView {
+public final class RiskView: UIView {
     
     private let headerLabel: UILabel = {
         let view: UILabel = UILabel()
@@ -24,7 +24,7 @@ public final class ProductView: UIView {
     }()
     
     // MARK: Initializer
-    public init(state: ProductVC.State) {
+    public init(state: MorphingViewState) {
         self.state = state
         
         super.init(frame: CGRect.zero)
@@ -36,9 +36,9 @@ public final class ProductView: UIView {
         
         switch self.state {
         case .normal:
-            self.normalStateLayout()
+            self.normalState()
         case .expanded:
-            self.expandedStateLayout()
+            self.expandedState()
         case .beneath:
             break
         }
@@ -49,7 +49,7 @@ public final class ProductView: UIView {
     }
     
     // MARK: Stored Properties
-    public var state: ProductVC.State {
+    public var state: MorphingViewState {
         didSet {
             switch self.state {
             case .beneath:
@@ -59,21 +59,21 @@ public final class ProductView: UIView {
             case .expanded:
                 UIView.animate(withDuration: 0.3) {
                     self.backgroundColor = UIColor.red.withAlphaComponent(0.7)
-                    self.expandedStateLayout()
+                    self.expandedState()
                 }
             case .normal:
                 UIView.animate(withDuration: 0.3) {
                     self.backgroundColor = UIColor.blue.withAlphaComponent(0.7)
-                    self.normalStateLayout()
+                    self.normalState()
                 }
             }
         }
     }
 }
 
-extension ProductView {
-    
-    private func normalStateLayout() {
+
+extension RiskView: StateLayouts {
+    public func normalState() {
         self.headerLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
@@ -85,7 +85,7 @@ extension ProductView {
         self.layoutIfNeeded()
     }
     
-    private func expandedStateLayout() {
+    public func expandedState() {
         self.descriptionLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
@@ -95,6 +95,10 @@ extension ProductView {
         self.descriptionLabel.isHidden = false
         
         self.layoutIfNeeded()
+    }
+    
+    public func beneathState() {
+        
     }
     
 }

@@ -8,16 +8,10 @@
 
 import UIKit
 
-public final class ProductVC: UIViewController {
-    
-    public enum State {
-        case normal
-        case expanded
-        case beneath
-    }
+public final class RiskVC: UIViewController {
     
     // MARK: Initializer
-    public init(state: State) {
+    public init(state: MorphingViewState) {
         self.state = state
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,7 +23,7 @@ public final class ProductVC: UIViewController {
     // MARK: LifeCycle Methods
     public override func loadView() {
         super.loadView()
-        self.view = ProductView(state: self.state)
+        self.view = RiskView(state: self.state)
     }
     
     public override  func viewDidLoad() {
@@ -37,9 +31,9 @@ public final class ProductVC: UIViewController {
     }
     
     // MARK: - Stored Properties
-    public var state: State
+    public var state: MorphingViewState
 }
 
-extension ProductVC {
-    public var rootView: ProductView { return self.view as! ProductView }
+extension RiskVC {
+    public var rootView: RiskView { return self.view as! RiskView }
 }

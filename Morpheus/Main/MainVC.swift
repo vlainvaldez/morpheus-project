@@ -22,7 +22,7 @@ public final class MainVC: UIViewController {
     // MARK: LifeCycle Methods
     public override func loadView() {
         super.loadView()
-        self.view = MainView(productView: self.productVC.rootView)
+        self.view = MainView(riskView: self.riskVC.rootView)
     }
     
     public override func viewDidLoad() {
@@ -38,7 +38,7 @@ public final class MainVC: UIViewController {
         self.rootview.leftView.addGestureRecognizer(lefViewTapGesture)
     }
     
-    public var productVC: ProductVC = ProductVC(state: ProductVC.State.normal)
+    public var riskVC: RiskVC = RiskVC(state: MorphingViewState.normal)
 }
 
 // MARK: - Views

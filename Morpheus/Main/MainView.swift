@@ -30,8 +30,8 @@ public final class MainView: UIView {
         return view
     }()
     
-    public let rightView: UIView = {
-        let view: UIView = UIView()
+    public let rightView: MorpheusView = {
+        let view: MorpheusView = MorpheusView()
         view.backgroundColor = UIColor.red
         return view
     }()
@@ -51,14 +51,14 @@ public final class MainView: UIView {
     private var morpheusViewWidth: CGFloat!
     private var expandedMorpheusHeight: CGFloat!
     
-    private var productView: ProductView
+    private var riskView: RiskView
     
     private var leftViewBottomConstraint: Constraint!
     private var rightViewBottomConstraint: Constraint!
     
     // MARK: Initializer
-    public init(productView: ProductView) {
-        self.productView = productView
+    public init(riskView: RiskView) {
+        self.riskView = riskView
         super.init(frame: CGRect.zero)
         self.backgroundColor = UIColor.white
         
@@ -104,9 +104,9 @@ public final class MainView: UIView {
             self.rightViewBottomConstraint =  make.bottom.equalToSuperview().inset(20.0).constraint
         }
         
-        self.leftView.subviews(forAutoLayout: [self.productView])
+        self.leftView.subviews(forAutoLayout: [self.riskView])
 
-        self.productView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+        self.riskView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()
         }
         
@@ -131,9 +131,10 @@ public final class MainView: UIView {
 extension MainView {
     
     public func morphLeftView() {
-        self.productView.state = ProductVC.State.normal
+        
         switch self.leftView.isExpanded {
         case true:
+            
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
                 self.leftView.snp.removeConstraints()
                 self.leftView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
@@ -159,10 +160,11 @@ extension MainView {
             }) { [unowned self] (completed: Bool) -> Void in
                 self.leftView.isExpanded = false
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
+                self.riskView.state = MorphingViewState.normal
             }
 
         case false:
-            self.productView.state = ProductVC.State.expanded
+            
             UIView.animate(withDuration: 1.0, animations: { [unowned self] in
                 self.leftView.snp.removeConstraints()
                 
@@ -190,6 +192,7 @@ extension MainView {
             }) { [unowned self] (completed: Bool) -> Void in
                 self.rightView.backgroundColor = UIColor.red.withAlphaComponent(1.0)
                 self.leftView.isExpanded = true
+                self.riskView.state = MorphingViewState.expanded
             }
         }
     }
@@ -197,8 +200,7 @@ extension MainView {
 
 public class MorpheusView: UIView {
     
-    public var isExpanded: Bool = false
-    
+    // MARK: - Initializer
     public init() {
         super.init(frame: CGRect.zero)
     }
@@ -207,4 +209,6 @@ public class MorpheusView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Stored Properties
+    public var isExpanded: Bool = false
 }
