@@ -22,7 +22,10 @@ public final class MainVC: UIViewController {
     // MARK: LifeCycle Methods
     public override func loadView() {
         super.loadView()
-        self.view = MainView(riskView: self.riskVC.rootView)
+        self.view = MainView(
+            riskView: self.riskVC.rootView,
+            performanceView: self.performanceVC.rootView
+        )
     }
     
     public override func viewDidLoad() {
@@ -38,7 +41,9 @@ public final class MainVC: UIViewController {
         self.rootview.leftView.addGestureRecognizer(lefViewTapGesture)
     }
     
+    // MARK: - Stored Properties
     public var riskVC: RiskVC = RiskVC(state: MorphingViewState.normal)
+    public var performanceVC: PerformanceVC = PerformanceVC(state: MorphingViewState.normal)
 }
 
 // MARK: - Views
